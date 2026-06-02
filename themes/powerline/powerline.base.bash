@@ -287,7 +287,6 @@ function __powerline_last_status_prompt() {
 
 function __powerline_prompt_command() {
 	local last_status="$?" ## always the first
-	local beginning_of_line='\[\e[G\]'
 	local info prompt_color segment prompt
 
 	local LEFT_PROMPT=""
@@ -330,5 +329,5 @@ function __powerline_prompt_command() {
 		prompt+=" "
 	fi
 
-	PS1="${beginning_of_line}${normal?}${LEFT_PROMPT}${prompt}"
+	PS1="${normal?}${LEFT_PROMPT}${prompt}"
 }
